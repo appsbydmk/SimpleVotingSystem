@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Simple Voting System</string>
+    <string name="title_btn_login">Login</string>
+    <string name="title_tv_admin">Admin</string>
+    <string name="hint_tie_username">Username</string>
+    <string name="hint_tie_password">Password</string>
 </resources>
