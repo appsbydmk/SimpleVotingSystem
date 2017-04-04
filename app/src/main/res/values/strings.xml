@@ -6,4 +6,5 @@
     <string name="hint_tie_password">Password</string>
     <string name="title_voter_login">Voter Login</string>
     <string name="title_admin_login">Admin Login</string>
+    <string name="title_btn_vote">Vote</string>
 </resources>
