@@ -4,4 +4,6 @@
     <string name="title_tv_admin">Admin</string>
     <string name="hint_tie_username">Username</string>
     <string name="hint_tie_password">Password</string>
+    <string name="title_voter_login">Voter Login</string>
+    <string name="title_admin_login">Admin Login</string>
 </resources>

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.appsbydmk.simplevotingsystem.activities.MainActivity">
+    tools:context="com.appsbydmk.simplevotingsystem.activities.AdminActivity">
 
     <TextView
-        android:id="@+id/tv_title_voter_login"
+        android:id="@+id/tv_title_admin_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -15,13 +15,13 @@
         android:layout_marginEnd="@dimen/vertical_margin_all_views"
         android:layout_marginStart="@dimen/vertical_margin_all_views"
         android:layout_marginTop="@dimen/horizontal_margin_all_views"
-        android:text="@string/title_voter_login"
+        android:text="@string/title_admin_login"
         android:textAlignment="center"
         android:textSize="@dimen/text_size_heading_login_screen"
         android:textStyle="bold" />
 
     <LinearLayout
-        android:id="@+id/login_layout"
+        android:id="@+id/admin_login_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -29,7 +29,7 @@
         android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/til_voter_username"
+            android:id="@+id/til_admin_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/horizontal_margin_all_views"
@@ -38,7 +38,7 @@
             android:layout_marginTop="@dimen/horizontal_margin_all_views">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/tie_voter_username"
+                android:id="@+id/tie_admin_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/horizontal_margin_all_views"
@@ -49,7 +49,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/til_voter_password"
+            android:id="@+id/til_admin_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/horizontal_margin_all_views"
@@ -58,7 +58,7 @@
             android:layout_marginTop="@dimen/horizontal_margin_all_views">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/tie_voter_password"
+                android:id="@+id/tie_admin_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/horizontal_margin_all_views"
@@ -69,7 +69,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:id="@+id/btn_voter_login"
+            android:id="@+id/btn_admin_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/horizontal_margin_all_views"
@@ -80,21 +80,5 @@
             android:textAllCaps="false" />
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/tv_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
-        android:layout_marginEnd="@dimen/vertical_margin_all_views"
-        android:layout_marginStart="@dimen/vertical_margin_all_views"
-        android:layout_marginTop="@dimen/horizontal_margin_all_views"
-        android:clickable="true"
-        android:text="@string/title_tv_admin"
-        android:textColor="@color/colorAccent"
-        android:textColorLink="@color/colorAccent" />
-
 
 </RelativeLayout>
