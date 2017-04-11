@@ -13,13 +13,13 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvAdmin;
     Intent adminIntent, voterIntent;
-    Button btnVoterLogin;
+    Button btnVoter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnVoterLogin = (Button) this.findViewById(R.id.btn_voter_login);
+        btnVoter = (Button) this.findViewById(R.id.btn_voter);
         tvAdmin = (TextView) this.findViewById(R.id.tv_admin);
 
         tvAdmin.setOnClickListener(new View.OnClickListener() {
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnVoterLogin.setOnClickListener(new View.OnClickListener() {
+        btnVoter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 voterIntent = new Intent(MainActivity.this, VotingActivity.class);

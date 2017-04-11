@@ -65,7 +65,8 @@
                 android:layout_marginEnd="@dimen/vertical_margin_all_views"
                 android:layout_marginStart="@dimen/vertical_margin_all_views"
                 android:layout_marginTop="@dimen/horizontal_margin_all_views"
-                android:hint="@string/hint_tie_password" />
+                android:hint="@string/hint_tie_password"
+                android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
 
         <Button

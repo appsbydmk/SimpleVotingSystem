@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.appsbydmk.simplevotingsystem.activities.AdminPanelActivity">
+
+    <TextView
+        android:id="@+id/tv_admin_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+        android:layout_marginEnd="@dimen/vertical_margin_all_views"
+        android:layout_marginStart="@dimen/vertical_margin_all_views"
+        android:layout_marginTop="@dimen/horizontal_margin_all_views"
+        android:gravity="center_horizontal"
+        android:text="@string/title_admin_panel"
+        android:textSize="@dimen/text_size_heading_admin_panel" />
+
+    <Button
+        android:id="@+id/btn_ap_upd_view_candidates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+        android:layout_marginEnd="@dimen/vertical_margin_all_views"
+        android:layout_marginStart="@dimen/vertical_margin_all_views"
+        android:layout_marginTop="@dimen/horizontal_margin_all_views"
+        android:text="@string/title_ap_btn_upd_view_candidates"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_ap_set_upd_voter_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+        android:layout_marginEnd="@dimen/vertical_margin_all_views"
+        android:layout_marginStart="@dimen/vertical_margin_all_views"
+        android:layout_marginTop="@dimen/horizontal_margin_all_views"
+        android:text="@string/title_ap_btn_set_upd_voter_count"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_ap_view_election_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+        android:layout_marginEnd="@dimen/vertical_margin_all_views"
+        android:layout_marginStart="@dimen/vertical_margin_all_views"
+        android:layout_marginTop="@dimen/horizontal_margin_all_views"
+        android:text="@string/title_ap_btn_view_election_results"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_ap_reset_elections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+        android:layout_marginEnd="@dimen/vertical_margin_all_views"
+        android:layout_marginStart="@dimen/vertical_margin_all_views"
+        android:layout_marginTop="@dimen/horizontal_margin_all_views"
+        android:text="@string/title_ap_btn_reset_elections"
+        android:textAllCaps="false" />
+
+</LinearLayout>
