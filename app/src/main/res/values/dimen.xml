@@ -5,4 +5,5 @@
     <dimen name="text_size_heading_login_screen">30sp</dimen>
     <dimen name="text_size_heading_admin_panel">30sp</dimen>
     <dimen name="button_height_logon">100dp</dimen>
+    <dimen name="text_size_candidate_name">20sp</dimen>
 </resources>

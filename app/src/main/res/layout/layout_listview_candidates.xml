@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_candidate_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="0.7"
+        android:textSize="@dimen/text_size_candidate_name" />
+
+    <ImageButton
+        android:id="@+id/img_btn_edit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="0.1"
+        android:src="@android:drawable/ic_menu_edit" />
+
+    <ImageButton
+        android:id="@+id/img_btn_add"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="0.1"
+        android:src="@android:drawable/ic_menu_add" />
+
+    <ImageButton
+        android:id="@+id/img_btn_delete"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="0.1"
+        android:src="@android:drawable/ic_menu_delete" />
+
+</LinearLayout>

@@ -13,4 +13,5 @@
     <string name="title_ap_btn_set_upd_voter_count">Set or Update voter count</string>
     <string name="title_ap_btn_view_election_results">View election results</string>
     <string name="title_ap_btn_reset_elections">Reset elections</string>
+    <string name="hint_empty_candidates_list">No candidates currently.</string>
 </resources>

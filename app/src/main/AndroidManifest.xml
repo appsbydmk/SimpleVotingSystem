@@ -25,7 +25,8 @@
         <activity
             android:name=".activities.VotingActivity"
             android:parentActivityName=".activities.MainActivity" />
-        <activity android:name=".activities.AdminPanelActivity"></activity>
+        <activity android:name=".activities.AdminPanelActivity" />
+        <activity android:name=".activities.CandidateCountActivity"></activity>
     </application>
 
 </manifest>
