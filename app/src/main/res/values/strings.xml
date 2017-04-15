@@ -14,4 +14,7 @@
     <string name="title_ap_btn_view_election_results">View election results</string>
     <string name="title_ap_btn_reset_elections">Reset elections</string>
     <string name="hint_empty_candidates_list">No candidates currently.</string>
+    <string name="title_voter_count">Total Voters</string>
+    <string name="title_total_candidates">Total Candidates</string>
+    <string name="title_activity_voting">Vote</string>
 </resources>

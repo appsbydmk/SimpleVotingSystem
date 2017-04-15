@@ -21,12 +21,24 @@
         <activity android:name=".activities.MainActivity" />
         <activity
             android:name=".activities.AdminActivity"
+            android:label="@string/title_admin_login"
             android:parentActivityName=".activities.MainActivity" />
         <activity
             android:name=".activities.VotingActivity"
+            android:label="@string/title_activity_voting"
             android:parentActivityName=".activities.MainActivity" />
-        <activity android:name=".activities.AdminPanelActivity" />
-        <activity android:name=".activities.CandidateCountActivity"></activity>
+        <activity
+            android:name=".activities.AdminPanelActivity"
+            android:label="@string/title_admin_panel"
+            android:parentActivityName=".activities.AdminActivity" />
+        <activity
+            android:name=".activities.CandidateCountActivity"
+            android:label="@string/title_total_candidates"
+            android:parentActivityName=".activities.AdminPanelActivity" />
+        <activity
+            android:name=".activities.VoterCountActivity"
+            android:label="@string/title_voter_count"
+            android:parentActivityName=".activities.AdminPanelActivity" />
     </application>
 
 </manifest>
