@@ -17,4 +17,7 @@
     <string name="title_voter_count">Total Voters</string>
     <string name="title_total_candidates">Total Candidates</string>
     <string name="title_activity_voting">Vote</string>
+    <string name="title_ap_btn_change_password">Change Admin Password</string>
+    <string name="hint_tie_change_password">Type new password</string>
+    <string name="title_btn_save">Save</string>
 </resources>

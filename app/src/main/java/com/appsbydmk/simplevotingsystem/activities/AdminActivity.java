@@ -1,6 +1,7 @@
 package com.appsbydmk.simplevotingsystem.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
@@ -9,12 +10,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.appsbydmk.simplevotingsystem.R;
+import com.appsbydmk.simplevotingsystem.helpers.HelperConstants;
 
 public class AdminActivity extends AppCompatActivity {
-    Intent adminPanelIntent;
-    TextInputEditText tieAdminUsername, tieAdminPassword;
-    TextInputLayout tilAdminUsername, tilAdminPassword;
-    Button btnAdminLogin;
+    private Intent adminPanelIntent;
+    private TextInputEditText tieAdminUsername, tieAdminPassword;
+    private TextInputLayout tilAdminUsername, tilAdminPassword;
+    private Button btnAdminLogin;
+    private SharedPreferences adminSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,10 @@ public class AdminActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin);
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        adminSettings = getSharedPreferences(HelperConstants.ADMIN_SETTINGS, MODE_PRIVATE);
+        final String adminUsername = adminSettings.getString("admin_username", "admin");
+        final String adminPassword = adminSettings.getString("admin_password", "admin");
 
         tieAdminUsername = (TextInputEditText) this.findViewById(R.id.tie_admin_username);
         tieAdminPassword = (TextInputEditText) this.findViewById(R.id.tie_admin_password);
@@ -31,7 +38,7 @@ public class AdminActivity extends AppCompatActivity {
         btnAdminLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tieAdminUsername.getText().toString().equals("admin") && tieAdminPassword.getText().toString().equals("admin12345")) {
+                if (tieAdminUsername.getText().toString().equals(adminUsername) && tieAdminPassword.getText().toString().equals(adminPassword)) {
                     adminPanelIntent = new Intent(AdminActivity.this, AdminPanelActivity.class);
                     AdminActivity.this.startActivity(adminPanelIntent);
                     AdminActivity.this.finish();

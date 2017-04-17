@@ -51,4 +51,16 @@
         android:text="@string/title_ap_btn_reset_elections"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_ap_change_admin_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+        android:layout_marginEnd="@dimen/vertical_margin_all_views"
+        android:layout_marginStart="@dimen/vertical_margin_all_views"
+        android:layout_marginTop="@dimen/horizontal_margin_all_views"
+        android:text="@string/title_ap_btn_change_password"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_red_dark" />
+
 </LinearLayout>

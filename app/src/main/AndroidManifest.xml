@@ -39,6 +39,10 @@
             android:name=".activities.VoterCountActivity"
             android:label="@string/title_voter_count"
             android:parentActivityName=".activities.AdminPanelActivity" />
+        <activity
+            android:name=".activities.AdminPasswordActivity"
+            android:label="@string/title_ap_btn_change_password"
+            android:parentActivityName=".activities.AdminPanelActivity" />
     </application>
 
 </manifest>
