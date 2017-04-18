@@ -1,10 +1,14 @@
 package com.appsbydmk.simplevotingsystem.adapters;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.TextView;
@@ -54,19 +58,31 @@ public class CandidateListAdapter extends BaseAdapter implements ListAdapter {
         TextView tvCandidateName = (TextView) view.findViewById(R.id.tv_candidate_name);
         tvCandidateName.setText(candidates.get(position));
 
-        ImageButton addCandidate, deleteCandidate, editCandidate;
-        addCandidate = (ImageButton) view.findViewById(R.id.img_btn_add);
-        addCandidate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        final ImageButton deleteCandidate, editCandidate;
         editCandidate = (ImageButton) view.findViewById(R.id.img_btn_edit);
         editCandidate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(listContext);
+                builder.setTitle("Edit the candidate");
+                final EditText etCandidate = new EditText(listContext);
+                etCandidate.setText(candidates.get(position));
+                etCandidate.setInputType(InputType.TYPE_CLASS_TEXT);
+                builder.setView(etCandidate);
+                builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        candidates.set(position, etCandidate.getText().toString());
+                        notifyDataSetChanged();
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                builder.show();
             }
         });
         deleteCandidate = (ImageButton) view.findViewById(R.id.img_btn_delete);
@@ -77,6 +93,6 @@ public class CandidateListAdapter extends BaseAdapter implements ListAdapter {
                 notifyDataSetChanged();
             }
         });
-        return null;
+        return view;
     }
 }

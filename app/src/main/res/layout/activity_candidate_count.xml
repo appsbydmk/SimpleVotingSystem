@@ -7,41 +7,44 @@
     android:orientation="vertical"
     tools:context="com.appsbydmk.simplevotingsystem.activities.CandidateCountActivity">
 
-    <ScrollView
-        android:id="@+id/sv_list_candidates"
+    <LinearLayout
+        android:id="@+id/layout_candidates_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/layout_candidates_list"
+        <ListView
+            android:id="@+id/lv_all_candidates"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+            android:layout_marginEnd="@dimen/vertical_margin_all_views"
+            android:layout_marginStart="@dimen/vertical_margin_all_views"
+            android:layout_marginTop="@dimen/horizontal_margin_all_views" />
 
-            <ListView
-                android:id="@+id/lv_all_candidates"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/horizontal_margin_all_views"
-                android:layout_marginEnd="@dimen/vertical_margin_all_views"
-                android:layout_marginStart="@dimen/vertical_margin_all_views"
-                android:layout_marginTop="@dimen/horizontal_margin_all_views" />
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+            android:layout_marginEnd="@dimen/vertical_margin_all_views"
+            android:layout_marginStart="@dimen/vertical_margin_all_views"
+            android:layout_marginTop="@dimen/horizontal_margin_all_views"
+            android:gravity="center"
+            android:text="@string/hint_empty_candidates_list" />
 
-            <TextView
-                android:id="@android:id/empty"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/horizontal_margin_all_views"
-                android:layout_marginEnd="@dimen/vertical_margin_all_views"
-                android:layout_marginStart="@dimen/vertical_margin_all_views"
-                android:layout_marginTop="@dimen/horizontal_margin_all_views"
-                android:gravity="center"
-                android:text="@string/hint_empty_candidates_list" />
+        <Button
+            android:id="@+id/btn_candidate_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+            android:layout_marginEnd="@dimen/vertical_margin_all_views"
+            android:layout_marginStart="@dimen/vertical_margin_all_views"
+            android:layout_marginTop="@dimen/horizontal_margin_all_views"
+            android:gravity="center"
+            android:text="@string/title_btn_add" />
 
 
-        </LinearLayout>
-
-    </ScrollView>
-
+    </LinearLayout>
 
 </LinearLayout>

@@ -20,4 +20,5 @@
     <string name="title_ap_btn_change_password">Change Admin Password</string>
     <string name="hint_tie_change_password">Type new password</string>
     <string name="title_btn_save">Save</string>
+    <string name="title_btn_add">Add</string>
 </resources>
