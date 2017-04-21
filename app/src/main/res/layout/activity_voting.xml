@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.appsbydmk.simplevotingsystem.activities.VotingActivity">
 
     <ListView
         android:id="@+id/lv_all_candidates"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_vote"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
         android:layout_marginEnd="@dimen/vertical_margin_all_views"
         android:layout_marginStart="@dimen/vertical_margin_all_views"
-        android:layout_marginTop="@dimen/horizontal_margin_all_views" />
+        android:layout_marginTop="@dimen/horizontal_margin_all_views"
+        android:layout_weight="1" />
 
     <Button
         android:id="@+id/btn_vote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:text="@string/title_btn_vote"
         android:textAllCaps="false" />
 
-</RelativeLayout>
+</LinearLayout>

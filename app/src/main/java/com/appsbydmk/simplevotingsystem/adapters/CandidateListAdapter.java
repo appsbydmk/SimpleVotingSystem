@@ -14,6 +14,7 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import com.appsbydmk.simplevotingsystem.R;
+import com.appsbydmk.simplevotingsystem.helpers.CandidatesFileHelper;
 
 import java.util.ArrayList;
 
@@ -25,6 +26,7 @@ public class CandidateListAdapter extends BaseAdapter implements ListAdapter {
 
     private ArrayList<String> candidates = new ArrayList<>();
     private Context listContext;
+    private CandidatesFileHelper candidatesFileHelper;
 
     public CandidateListAdapter(ArrayList<String> candidates, Context listContext) {
         this.candidates = candidates;
@@ -48,7 +50,7 @@ public class CandidateListAdapter extends BaseAdapter implements ListAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-
+        candidatesFileHelper = new CandidatesFileHelper(listContext);
         View view = convertView;
         if (view == null) {
             LayoutInflater inflater = (LayoutInflater) listContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -72,7 +74,8 @@ public class CandidateListAdapter extends BaseAdapter implements ListAdapter {
                 builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        candidates.set(position, etCandidate.getText().toString());
+                        String candidateName = etCandidate.getText().toString();
+                        candidates.set(position, candidateName);
                         notifyDataSetChanged();
                     }
                 });
@@ -89,7 +92,9 @@ public class CandidateListAdapter extends BaseAdapter implements ListAdapter {
         deleteCandidate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String target = candidates.get(position);
                 candidates.remove(position);
+                candidatesFileHelper.removeCandidate(target);
                 notifyDataSetChanged();
             }
         });
