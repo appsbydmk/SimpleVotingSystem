@@ -6,8 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.appsbydmk.simplevotingsystem.R;
+import com.appsbydmk.simplevotingsystem.helpers.HelperConstants;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,9 +36,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 voterIntent = new Intent(MainActivity.this, VotingActivity.class);
-                MainActivity.this.startActivity(voterIntent);
-                MainActivity.this.finish();
+                MainActivity.this.startActivityForResult(voterIntent, HelperConstants.VOTING_STATUS_CODE);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == HelperConstants.VOTING_STATUS_CODE) {
+            if (resultCode == RESULT_OK)
+                Toast.makeText(getBaseContext(), "Thank you for voting!", Toast.LENGTH_SHORT).show();
+        }
     }
 }

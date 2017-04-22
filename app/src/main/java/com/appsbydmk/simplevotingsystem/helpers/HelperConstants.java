@@ -10,4 +10,5 @@ public class HelperConstants {
     public static final String ADMIN_SETTINGS = "PREF_ADMIN_SETTINGS";
     public static final int ADMIN_CHANGE_PASSWORD_REQUEST_CODE = 200;
     public static final String VOTER_COUNT_FILE = "voter_count.txt";
+    public static final int VOTING_STATUS_CODE = 100;
 }

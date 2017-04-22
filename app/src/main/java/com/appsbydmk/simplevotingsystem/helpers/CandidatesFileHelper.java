@@ -89,4 +89,26 @@ public class CandidatesFileHelper {
             }
         }
     }
+
+    public void editCandidate(String newCandidateName, int position) {
+        ArrayList<String> allCandidates = this.getAllCandidates();
+        allCandidates.set(position, newCandidateName);
+
+        BufferedWriter candidateWriter = null;
+        try {
+            candidateWriter = new BufferedWriter(new OutputStreamWriter(
+                    context.openFileOutput(HelperConstants.FILE_CANDIDATES, Context.MODE_PRIVATE)));
+            for (String candidate : allCandidates) {
+                candidateWriter.write(candidate + "\n");
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                candidateWriter.close();
+            } catch (IOException | NullPointerException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
 }

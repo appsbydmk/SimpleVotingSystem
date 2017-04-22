@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Simple Voting System</string>
+    <string name="app_name">Offline Voting App</string>
     <string name="title_btn_logon">Click here to vote for your favorite candidate</string>
     <string name="title_btn_login">Login</string>
     <string name="title_tv_admin">Admin</string>

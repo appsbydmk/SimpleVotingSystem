@@ -76,6 +76,7 @@ public class CandidateListAdapter extends BaseAdapter implements ListAdapter {
                     public void onClick(DialogInterface dialog, int which) {
                         String candidateName = etCandidate.getText().toString();
                         candidates.set(position, candidateName);
+                        candidatesFileHelper.editCandidate(candidateName, position);
                         notifyDataSetChanged();
                     }
                 });
