@@ -40,7 +40,7 @@ public class VotingActivity extends AppCompatActivity {
         lvCandidates = (ListView) this.findViewById(R.id.lv_all_candidates);
         lvCandidates.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
         candidatesAdapter = new ArrayAdapter<String>(getBaseContext(),
-                android.R.layout.simple_list_item_single_choice, candidatesFileHelper.getAllCandidates());
+                android.R.layout.simple_list_item_1, candidatesFileHelper.getAllCandidates());
         lvCandidates.setAdapter(candidatesAdapter);
     }
 }

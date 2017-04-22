@@ -7,6 +7,10 @@
         android:id="@+id/tv_candidate_name"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+        android:layout_marginEnd="@dimen/vertical_margin_all_views"
+        android:layout_marginStart="@dimen/vertical_margin_all_views"
+        android:layout_marginTop="@dimen/horizontal_margin_all_views"
         android:layout_weight="0.7"
         android:gravity="center"
         android:textSize="@dimen/text_size_candidate_name" />
@@ -15,14 +19,24 @@
         android:id="@+id/img_btn_edit"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+        android:layout_marginEnd="@dimen/vertical_margin_all_views"
+        android:layout_marginStart="@dimen/vertical_margin_all_views"
+        android:layout_marginTop="@dimen/horizontal_margin_all_views"
         android:layout_weight="0.1"
+        android:background="@color/colorPrimary"
         android:src="@android:drawable/ic_menu_edit" />
 
     <ImageButton
         android:id="@+id/img_btn_delete"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+        android:layout_marginEnd="@dimen/vertical_margin_all_views"
+        android:layout_marginStart="@dimen/vertical_margin_all_views"
+        android:layout_marginTop="@dimen/horizontal_margin_all_views"
         android:layout_weight="0.1"
+        android:background="@color/colorPrimary"
         android:src="@android:drawable/ic_menu_delete" />
 
 </LinearLayout>
