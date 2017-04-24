@@ -9,4 +9,5 @@ public class HelperConstants {
     public static final String VOTER_COUNT_FILE = "voter_count.txt";
     public static final int VOTING_STATUS_CODE = 100;
     public static final String VOTER_FILE = "voter_file.txt";
+    public static final String ELECTIONS_FILE = "elections_result.txt";
 }

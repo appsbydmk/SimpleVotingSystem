@@ -52,8 +52,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Thank you for voting!", Toast.LENGTH_SHORT).show();
                 } else if (message.equals("alreadyVoted")) {
                     Toast.makeText(getBaseContext(), "You have already voted!", Toast.LENGTH_SHORT).show();
+                } else if (message.equals("allVoted")) {
+                    Toast.makeText(getBaseContext(), "All voters have already voted!", Toast.LENGTH_SHORT).show();
                 }
-                Toast.makeText(getBaseContext(), "Thank you for voting!", Toast.LENGTH_SHORT).show();
             }
         }
     }

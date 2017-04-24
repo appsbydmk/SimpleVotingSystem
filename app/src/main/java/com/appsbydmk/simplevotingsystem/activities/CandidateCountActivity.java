@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.appsbydmk.simplevotingsystem.R;
 import com.appsbydmk.simplevotingsystem.adapters.CandidateListAdapter;
 import com.appsbydmk.simplevotingsystem.helpers.CandidatesFileHelper;
+import com.appsbydmk.simplevotingsystem.helpers.VotingFileHelper;
 
 import java.util.ArrayList;
 
@@ -22,12 +23,14 @@ public class CandidateCountActivity extends AppCompatActivity {
     private ArrayList<String> allCandidates;
     private CandidateListAdapter candidateListAdapter;
     private CandidatesFileHelper candidatesFileHelper;
+    private VotingFileHelper votingFileHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_candidate_count);
 
+        votingFileHelper = new VotingFileHelper(this);
         candidatesFileHelper = new CandidatesFileHelper(this);
         allCandidates = candidatesFileHelper.getAllCandidates();
         assert getSupportActionBar() != null;
@@ -52,6 +55,7 @@ public class CandidateCountActivity extends AppCompatActivity {
                         String candidateName = etCandidate.getText().toString();
                         allCandidates.add(candidateName);
                         candidatesFileHelper.addCandidate(candidateName);
+                        votingFileHelper.writeAllCandidates();
                         candidateListAdapter.notifyDataSetChanged();
                     }
                 });
