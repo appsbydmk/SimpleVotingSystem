@@ -108,7 +108,7 @@ public class VotingFileHelper {
         }
     }
 
-    private String[] getElectionsArray() {
+    public String[] getElectionsArray() {
         String[] allCandidates = null;
         BufferedReader electionReader = null;
         String electionLine;

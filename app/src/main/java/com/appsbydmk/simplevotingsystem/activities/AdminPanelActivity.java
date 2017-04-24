@@ -11,8 +11,8 @@ import com.appsbydmk.simplevotingsystem.helpers.HelperConstants;
 
 public class AdminPanelActivity extends AppCompatActivity {
 
-    private Intent candidateIntent, voterCountIntent, adminPasswordIntent;
-    private Button btnViewUpdCandidate, btnSetVoterCount, btnAdminPassword;
+    private Intent candidateIntent, voterCountIntent, adminPasswordIntent, electionResultIntent;
+    private Button btnViewUpdCandidate, btnSetVoterCount, btnAdminPassword, btnViewElectionsResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class AdminPanelActivity extends AppCompatActivity {
         btnViewUpdCandidate = (Button) this.findViewById(R.id.btn_ap_upd_view_candidates);
         btnSetVoterCount = (Button) this.findViewById(R.id.btn_ap_set_upd_voter_count);
         btnAdminPassword = (Button) this.findViewById(R.id.btn_ap_change_admin_password);
+        btnViewElectionsResult = (Button) this.findViewById(R.id.btn_ap_view_election_results);
         btnViewUpdCandidate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +42,13 @@ public class AdminPanelActivity extends AppCompatActivity {
             public void onClick(View v) {
                 adminPasswordIntent = new Intent(AdminPanelActivity.this, AdminPasswordActivity.class);
                 AdminPanelActivity.this.startActivityForResult(adminPasswordIntent, HelperConstants.ADMIN_CHANGE_PASSWORD_REQUEST_CODE);
+            }
+        });
+        btnViewElectionsResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                electionResultIntent = new Intent(AdminPanelActivity.this, ElectionsResultActivity.class);
+                AdminPanelActivity.this.startActivity(electionResultIntent);
             }
         });
     }
