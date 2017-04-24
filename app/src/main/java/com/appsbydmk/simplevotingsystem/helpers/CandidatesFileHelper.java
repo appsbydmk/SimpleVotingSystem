@@ -10,9 +10,6 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-/**
- * Created by Darshan on 19-04-2017.
- */
 
 public class CandidatesFileHelper {
 
@@ -34,7 +31,8 @@ public class CandidatesFileHelper {
             ex.printStackTrace();
         } finally {
             try {
-                candidateWriter.close();
+                if (candidateWriter != null)
+                    candidateWriter.close();
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -52,11 +50,12 @@ public class CandidatesFileHelper {
                 allCandidates.add(candidate);
             }
             candidateReader.close();
-        } catch (IOException ex) {
+        } catch (IOException | NullPointerException ex) {
             ex.printStackTrace();
         } finally {
             try {
-                candidateReader.close();
+                if (candidateReader != null)
+                    candidateReader.close();
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -83,7 +82,8 @@ public class CandidatesFileHelper {
             ex.printStackTrace();
         } finally {
             try {
-                candidateWriter.close();
+                if (candidateWriter != null)
+                    candidateWriter.close();
             } catch (IOException | NullPointerException ex) {
                 ex.printStackTrace();
             }
@@ -105,7 +105,8 @@ public class CandidatesFileHelper {
             ex.printStackTrace();
         } finally {
             try {
-                candidateWriter.close();
+                if (candidateWriter != null)
+                    candidateWriter.close();
             } catch (IOException | NullPointerException ex) {
                 ex.printStackTrace();
             }

@@ -8,10 +8,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-/**
- * Created by Darshan on 21-04-2017.
- */
-
 public class VotersFileHelper {
 
     Context context;
@@ -27,7 +23,8 @@ public class VotersFileHelper {
             ex.printStackTrace();
         } finally {
             try {
-                voterCountWriter.close();
+                if (voterCountWriter != null)
+                    voterCountWriter.close();
             } catch (IOException | NullPointerException ex) {
                 ex.printStackTrace();
             }
@@ -48,7 +45,8 @@ public class VotersFileHelper {
             ex.printStackTrace();
         } finally {
             try {
-                voterCountReader.close();
+                if (voterCountReader != null)
+                    voterCountReader.close();
             } catch (IOException | NullPointerException ex) {
                 ex.printStackTrace();
             }

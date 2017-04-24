@@ -44,9 +44,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
         if (requestCode == HelperConstants.VOTING_STATUS_CODE) {
-            if (resultCode == RESULT_OK)
+            if (resultCode == RESULT_OK) {
+                String message = data.getStringExtra("message");
+                if (message.equals("thankYou")) {
+                    Toast.makeText(getBaseContext(), "Thank you for voting!", Toast.LENGTH_SHORT).show();
+                } else if (message.equals("alreadyVoted")) {
+                    Toast.makeText(getBaseContext(), "You have already voted!", Toast.LENGTH_SHORT).show();
+                }
                 Toast.makeText(getBaseContext(), "Thank you for voting!", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }

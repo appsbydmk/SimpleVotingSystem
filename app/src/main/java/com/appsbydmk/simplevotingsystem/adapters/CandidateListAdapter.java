@@ -18,10 +18,6 @@ import com.appsbydmk.simplevotingsystem.helpers.CandidatesFileHelper;
 
 import java.util.ArrayList;
 
-/**
- * Created by Darshan on 14-04-2017.
- */
-
 public class CandidateListAdapter extends BaseAdapter implements ListAdapter {
 
     private ArrayList<String> candidates = new ArrayList<>();
