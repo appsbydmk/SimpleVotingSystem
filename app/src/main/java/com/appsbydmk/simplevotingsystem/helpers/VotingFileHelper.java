@@ -88,22 +88,38 @@ public class VotingFileHelper {
         ArrayList<String> allCandidates = candidatesFileHelper.getAllCandidates();
         BufferedWriter electionWriter = null;
         String electionLine = "";
-        try {
-            electionWriter = new BufferedWriter(new OutputStreamWriter(context.openFileOutput(HelperConstants.ELECTIONS_FILE, Context.MODE_PRIVATE)));
-            for (String candidate : allCandidates) {
-                electionLine += candidate + "," + 0 + ",";
-            }
-            electionLine = electionLine.substring(0, electionLine.lastIndexOf(","));
-            System.out.println(electionLine);
-            electionWriter.write(electionLine);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        } finally {
+        if (allCandidates.size() > 0) {
             try {
-                if (electionWriter != null)
-                    electionWriter.close();
-            } catch (IOException | NullPointerException ex) {
+                electionWriter = new BufferedWriter(new OutputStreamWriter(context.openFileOutput(HelperConstants.ELECTIONS_FILE, Context.MODE_PRIVATE)));
+                for (String candidate : allCandidates) {
+                    electionLine += candidate + "," + 0 + ",";
+                }
+                electionLine = electionLine.substring(0, electionLine.lastIndexOf(","));
+                System.out.println(electionLine);
+                electionWriter.write(electionLine);
+            } catch (IOException ex) {
                 ex.printStackTrace();
+            } finally {
+                try {
+                    if (electionWriter != null)
+                        electionWriter.close();
+                } catch (IOException | NullPointerException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        } else {
+            try {
+                electionWriter = new BufferedWriter(new OutputStreamWriter(context.openFileOutput(HelperConstants.ELECTIONS_FILE, Context.MODE_PRIVATE)));
+                electionWriter.write(electionLine);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            } finally {
+                try {
+                    if (electionWriter != null)
+                        electionWriter.close();
+                } catch (IOException | NullPointerException ex) {
+                    ex.printStackTrace();
+                }
             }
         }
     }
