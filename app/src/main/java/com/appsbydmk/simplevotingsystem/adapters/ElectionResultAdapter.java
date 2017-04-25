@@ -1,6 +1,7 @@
 package com.appsbydmk.simplevotingsystem.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,8 +50,12 @@ public class ElectionResultAdapter extends BaseAdapter implements ListAdapter {
 
         TextView tvCandidateName = (TextView) view.findViewById(R.id.tv_rs_candidate_name);
         tvCandidateName.setText(candidateName.get(position));
+        tvCandidateName.setTextColor(Color.parseColor("#FFFFFF"));
+
         TextView tvCandidateResult = (TextView) view.findViewById(R.id.lv_rs_candidate_votes);
         tvCandidateResult.setText(candidateVotes.get(position));
+        tvCandidateResult.setTextColor(Color.parseColor("#FFFFFF"));
+
         return view;
     }
 }

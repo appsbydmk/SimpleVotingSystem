@@ -3,6 +3,7 @@ package com.appsbydmk.simplevotingsystem.activities;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.appsbydmk.simplevotingsystem.R;
@@ -66,16 +68,25 @@ public class VotingActivity extends AppCompatActivity {
 
     private void displayAlertDialog(final String selectedItem) {
         AlertDialog.Builder builder = new AlertDialog.Builder(VotingActivity.this);
-        builder.setTitle("Enter your ID and Name");
         LinearLayout dialogLayout = new LinearLayout(VotingActivity.this);
         dialogLayout.setOrientation(LinearLayout.VERTICAL);
 
+        final TextView title = new TextView(VotingActivity.this);
+        title.setText("Enter your ID and Name");
+        title.setTextColor(Color.parseColor("#FF9800"));
+        title.setTextSize(getResources().getDimension(R.dimen.dialog_title_text_size));
+        builder.setCustomTitle(title);
+
         final EditText etVoterID = new EditText(VotingActivity.this);
+        etVoterID.setTextColor(Color.parseColor("#37474F"));
+        etVoterID.setHintTextColor(Color.parseColor("#FF9800"));
         etVoterID.setInputType(InputType.TYPE_CLASS_NUMBER);
         etVoterID.setHint("Voter ID");
         dialogLayout.addView(etVoterID);
 
         final EditText etVoterName = new EditText(VotingActivity.this);
+        etVoterName.setHintTextColor(Color.parseColor("#FF9800"));
+        etVoterName.setTextColor(Color.parseColor("#37474F"));
         etVoterName.setInputType(InputType.TYPE_CLASS_TEXT);
         etVoterName.setHint("Voter Name");
         dialogLayout.addView(etVoterName);

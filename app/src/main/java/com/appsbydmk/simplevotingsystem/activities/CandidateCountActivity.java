@@ -1,6 +1,7 @@
 package com.appsbydmk.simplevotingsystem.activities;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.appsbydmk.simplevotingsystem.R;
 import com.appsbydmk.simplevotingsystem.adapters.CandidateListAdapter;
@@ -45,8 +47,14 @@ public class CandidateCountActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(CandidateCountActivity.this);
-                builder.setTitle("Add a candidate");
+                final TextView title = new TextView(CandidateCountActivity.this);
+                title.setText("Add a candidate");
+                title.setTextColor(Color.parseColor("#FF9800"));
+                title.setTextSize(getResources().getDimension(R.dimen.dialog_title_text_size));
+                builder.setCustomTitle(title);
                 final EditText etCandidate = new EditText(CandidateCountActivity.this);
+                etCandidate.setTextColor(Color.parseColor("#37474F"));
+                etCandidate.setHintTextColor(Color.parseColor("#FF9800"));
                 etCandidate.setInputType(InputType.TYPE_CLASS_TEXT);
                 builder.setView(etCandidate);
                 builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
