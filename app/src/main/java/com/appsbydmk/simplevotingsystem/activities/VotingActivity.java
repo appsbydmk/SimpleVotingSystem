@@ -42,6 +42,7 @@ public class VotingActivity extends AppCompatActivity {
         candidatesFileHelper = new CandidatesFileHelper(this);
         lvCandidates = (ListView) this.findViewById(R.id.lv_all_candidates);
         lvCandidates.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
+        lvCandidates.setEmptyView(this.findViewById(android.R.id.empty));
         candidatesAdapter = new ArrayAdapter<>(getBaseContext(),
                 android.R.layout.simple_list_item_1, candidatesFileHelper.getAllCandidates());
         lvCandidates.setAdapter(candidatesAdapter);

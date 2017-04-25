@@ -22,4 +22,6 @@
     <string name="title_btn_save">Save</string>
     <string name="title_btn_add">Add</string>
     <string name="title_elections_result">Elections Result</string>
+    <string name="hint_empty_elections_result">Elections have yet to be held.</string>
+    <string name="hint_empty_candidates_voting_list">There are no candidates currently.</string>
 </resources>

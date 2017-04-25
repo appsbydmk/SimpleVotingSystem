@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.appsbydmk.simplevotingsystem.activities.ElectionsResultActivity">
-
-    <ListView
-        android:id="@+id/lv_elections_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
-        android:layout_marginEnd="@dimen/vertical_margin_all_views"
-        android:layout_marginStart="@dimen/vertical_margin_all_views"
-        android:layout_marginTop="@dimen/horizontal_margin_all_views" />
+    android:orientation="horizontal">
 
     <TextView
-        android:id="@android:id/empty"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_rs_candidate_name"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/horizontal_margin_all_views"
         android:layout_marginEnd="@dimen/vertical_margin_all_views"
         android:layout_marginStart="@dimen/vertical_margin_all_views"
         android:layout_marginTop="@dimen/horizontal_margin_all_views"
+        android:layout_weight="1"
         android:gravity="center"
-        android:text="@string/hint_empty_elections_result" />
+        android:textSize="@dimen/text_size_candidate_name" />
+
+    <TextView
+        android:id="@+id/lv_rs_candidate_votes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+        android:layout_marginEnd="@dimen/vertical_margin_all_views"
+        android:layout_marginStart="@dimen/vertical_margin_all_views"
+        android:layout_marginTop="@dimen/horizontal_margin_all_views"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_candidate_name" />
 
 </LinearLayout>

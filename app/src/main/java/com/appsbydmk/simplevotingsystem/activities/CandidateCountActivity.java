@@ -39,7 +39,7 @@ public class CandidateCountActivity extends AppCompatActivity {
         candidatesList = (ListView) this.findViewById(R.id.lv_all_candidates);
         candidateListAdapter = new CandidateListAdapter(allCandidates, this);
         candidatesList.setAdapter(candidateListAdapter);
-        candidatesList.setEmptyView(findViewById(android.R.id.empty));
+        candidatesList.setEmptyView(this.findViewById(android.R.id.empty));
         btnCandidatesAdd = (Button) this.findViewById(R.id.btn_candidate_add);
         btnCandidatesAdd.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -16,7 +16,18 @@
         android:layout_marginStart="@dimen/vertical_margin_all_views"
         android:layout_marginTop="@dimen/horizontal_margin_all_views"
         android:layout_weight="1"
-        android:listSelector="@color/colorPrimary"/>
+        android:listSelector="@color/colorPrimary" />
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/horizontal_margin_all_views"
+        android:layout_marginEnd="@dimen/vertical_margin_all_views"
+        android:layout_marginStart="@dimen/vertical_margin_all_views"
+        android:layout_marginTop="@dimen/horizontal_margin_all_views"
+        android:gravity="center"
+        android:text="@string/hint_empty_candidates_voting_list" />
 
     <Button
         android:id="@+id/btn_vote"
